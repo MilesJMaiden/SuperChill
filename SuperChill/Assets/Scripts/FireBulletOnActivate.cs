@@ -10,6 +10,9 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet;
     public Transform bulletOrigin;
     public float fireSpeed = 20f;
+
+    public AudioSource source;
+    public AudioClip clip;
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
