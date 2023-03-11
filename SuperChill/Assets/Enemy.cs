@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public FireBulletOnActivate gun;
 
     private NavMeshAgent agent;
+    private Animator animator;
     public Transform playerTarget;
+
+    public float stopDistance = 6f;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>(); 
         SetupRagdoll();
     }
 
@@ -20,6 +26,18 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         agent.SetDestination(playerTarget.position);
+
+        float distance = Vector3.Distance(playerTarget.position, transform.position);  
+        if (distance < stopDistance)
+        {
+            agent.isStopped = true;
+            animator.SetBool("Shoot", true);
+        }
+    }
+
+    public void ShootEnemy()
+    {
+        gun.FireBullet();
     }
 
     public void SetupRagdoll()
