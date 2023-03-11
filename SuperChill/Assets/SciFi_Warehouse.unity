@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 64a470f141fa7ef4dae5bca4afbe97d6, type: 2}
 --- !u!1001 &2143836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1037,6 +1037,7 @@ GameObject:
   - component: {fileID: 57940335}
   - component: {fileID: 57940337}
   - component: {fileID: 57940336}
+  - component: {fileID: 57940338}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -1335,6 +1336,18 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+--- !u!114 &57940338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57940333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a72fee880bb03146869c6a1e76e3b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &57992206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6254039948564839565, guid: 70c08b703d69f9142b472bf80faaf323, type: 3}
@@ -1415,6 +1428,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.12
   m_Center: {x: 0, y: 0.081594944, z: 0.055}
+--- !u!114 &57992211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57992206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &61147151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7224,6 +7251,20 @@ CapsuleCollider:
   m_Height: 0.25175792
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.12587896}
+--- !u!114 &377009588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377009583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1 &377128045
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,6 +9237,20 @@ CapsuleCollider:
   m_Height: 0.4362787
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.21813935}
+--- !u!114 &466271539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466271534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &467143778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9791,6 +9846,20 @@ CapsuleCollider:
   m_Height: 0.45179093
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.22589546}
+--- !u!114 &497976601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497976596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &500392067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10972,6 +11041,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06c2b8bf33e0e743abb41fc8b7efbbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTarget: {fileID: 1759865263}
+--- !u!95 &557773150
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557773147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35e4ba303709e8e45b17407854b5bcd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!195 &557773151
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557773147}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.75
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &563799226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4214932880819409745, guid: b0e81b98347f86e4b8f377f20dcc2a4e, type: 3}
@@ -11011,6 +11124,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.32637978, y: 0.22039485, z: 0.2448703}
   m_Center: {x: 0.000000044703484, y: 0.3217587, z: -0.00000010430813}
+--- !u!114 &567611392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567611388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!4 &570057785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1261515811824905592, guid: 802bdf7480910694bafece684d80ebfa, type: 3}
@@ -11493,6 +11620,20 @@ CapsuleCollider:
   m_Height: 0.41396254
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.20698127}
+--- !u!114 &572567550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572567545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1 &578607943
 GameObject:
   m_ObjectHideFlags: 0
@@ -15192,6 +15333,20 @@ CapsuleCollider:
   m_Height: 0.43627864
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.21813932}
+--- !u!114 &761001603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761001598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &763156656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26290,6 +26445,20 @@ CapsuleCollider:
   m_Height: 0.4139625
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.20698126}
+--- !u!114 &1244022160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244022155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &1245676200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28242,6 +28411,20 @@ CapsuleCollider:
   m_Height: 0.2517582
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.1258791}
+--- !u!114 &1318694754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318694749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &1321902457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34968,6 +35151,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.32637978, y: 0.2448703, z: 0.26934576}
   m_Center: {x: 0.000000044703484, y: 0.00000012665987, z: -0.13467288}
+--- !u!114 &1593772741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593772736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!4 &1600431279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8220780882054941164, guid: e2fdcaac11701fe438724a8a8b3a76c5, type: 3}
@@ -37900,6 +38097,7 @@ GameObject:
   - component: {fileID: 1750142408}
   - component: {fileID: 1750142410}
   - component: {fileID: 1750142409}
+  - component: {fileID: 1750142411}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -38198,6 +38396,18 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+--- !u!114 &1750142411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750142406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a72fee880bb03146869c6a1e76e3b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1755310932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44465,6 +44675,20 @@ CapsuleCollider:
   m_Height: 0.45179176
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.22589588}
+--- !u!114 &2003405733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003405728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e222ed30b8f1a4ea1744adb5eb9fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Weapon
+  enemy: {fileID: 557773149}
 --- !u!1001 &2009632149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44519,6 +44743,10 @@ PrefabInstance:
     - target: {fileID: 2107865098903756257, guid: 802bdf7480910694bafece684d80ebfa, type: 3}
       propertyPath: m_Name
       value: beerBottle Grabbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107865098903756257, guid: 802bdf7480910694bafece684d80ebfa, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1261515811291865270, guid: 802bdf7480910694bafece684d80ebfa, type: 3}

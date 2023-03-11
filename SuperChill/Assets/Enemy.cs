@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+
+    private NavMeshAgent agent;
+    public Transform playerTarget;
+
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         SetupRagdoll();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        agent.SetDestination(playerTarget.position);
     }
 
     public void SetupRagdoll()
