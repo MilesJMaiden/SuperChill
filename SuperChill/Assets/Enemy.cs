@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent agent;
     private Animator animator;
+    public Transform playerHead;
     public Transform playerTarget;
 
     public float stopDistance = 6f;
@@ -37,6 +38,8 @@ public class Enemy : MonoBehaviour
 
     public void ShootEnemy()
     {
+        Vector3 playerHeadPosition = playerHead.position - Random.Range(0, 0.4f) * Vector3.up;
+        gun.bulletOrigin.forward = (playerHeadPosition - gun.bulletOrigin.position).normalized;
         gun.FireBullet();
     }
 
